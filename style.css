@@ -2,19 +2,19 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url("sunset.png");
+    background-image: url("1868238-pollutionairqualityy.webp");
     background-repeat: no-repeat;
-    background-size: 300%;
+    background-size: 100%;
     color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 250vh;
+    height: 100vh;
  
 }
 
 #input-container {
-    background: #fff;
+    background:transparent;
     padding: 20px 30px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
