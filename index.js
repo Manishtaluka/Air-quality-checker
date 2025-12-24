@@ -25,11 +25,10 @@ form.addEventListener("submit",(event)=>{
         .then(result=>{
             let readings = result.list[0].components;
             let readings2 = result.list[0].main;
-            console.log(readings2);
-            console.log(readings);
-            
+            const aqiLevels = ["Good", "Fair", "Moderate", "Poor", "Very Poor"];
 
-            aqiResult.textContent=readings2.aqi;
+            
+            aqiResult.textContent = `${readings2.aqi} (${aqiLevels[readings2.aqi - 1]})`;
             coResult.textContent=readings.co;
             nh3Result.textContent=readings.nh3;
             noResult.textContent=readings.no;
@@ -42,4 +41,11 @@ form.addEventListener("submit",(event)=>{
 
             resultContainer.style.display = 'flex';
         })
+        .catch(error => {
+    console.error("Error fetching data:", error);
+    resultContainer.textContent = "Failed to fetch air quality data.";
+    resultContainer.style.display = 'flex';
+  });
+
+
 });
