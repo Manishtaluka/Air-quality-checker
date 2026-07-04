@@ -10,20 +10,19 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
- 
 }
 
 #input-container {
-    background:transparent;
+    background: transparent;
     padding: 20px 30px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
-    
 }
-form{
-    display:flex;
+
+form {
+    display: flex;
     flex-direction: column;
 }
 
@@ -32,7 +31,6 @@ h1 {
     color: #4CAF50;
     margin-bottom: 20px;
 }
-
 
 label {
     font-size: 14px;
@@ -69,9 +67,21 @@ button:hover {
     background: #45a049;
 }
 
+button:disabled {
+    background: #9e9e9e;
+    cursor: not-allowed;
+}
+
 button:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.error {
+    color: #d32f2f;
+    font-weight: bold;
+    text-align: center;
+    min-height: 20px;
 }
 
 .info {
@@ -80,25 +90,21 @@ button:focus {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
     max-width: 400px;
-    margin: 20px;;
+    margin: 20px;
     font-family: Arial, sans-serif;
     font-size: 20px;
-    display:none;
+    display: none;
     flex-direction: column;
-    
 }
 
-/* Title styling */
 .info-title {
     font-size: 1.8em;
     color: #2c3e50;
     margin-bottom: 15px;
     text-align: center;
     font-weight: bold;
-    
 }
 
-/* Data row styling */
 .info-data {
     padding: 10px 15px;
     background-color: #ffffff;
@@ -108,13 +114,18 @@ button:focus {
     font-size: 1em;
     color: #555;
     display: flex;
-    
     justify-content: space-between;
     align-items: center;
 }
 
-/* Alternate row background */
 .info-data:nth-child(even) {
     background-color: #f1f1f1;
 }
 
+/* AQI category colors, applied via JS to the #aqi span */
+.aqi-good { color: #2e7d32; font-weight: bold; }
+.aqi-moderate { color: #f9a825; font-weight: bold; }
+.aqi-usg { color: #ef6c00; font-weight: bold; }
+.aqi-unhealthy { color: #c62828; font-weight: bold; }
+.aqi-very-unhealthy { color: #8e24aa; font-weight: bold; }
+.aqi-hazardous { color: #6d1b1b; font-weight: bold; }

@@ -7,48 +7,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   
-    
+
     <div id="input-container">
         <h1>Air Quality Index (AQI)</h1>
-       
+
         <form id="form">
             <label for="longitude">Longitude:</label>
-            <input type="text" id="longitude" placeholder="enter longitude" ><br>
+            <input type="text" id="longitude" placeholder="e.g. 78.4867" inputmode="decimal"><br>
 
             <label for="latitude">Latitude:</label>
-            <input type="text" id="latitude" placeholder="enter latitude" ><br>
+            <input type="text" id="latitude" placeholder="e.g. 17.3850" inputmode="decimal"><br>
 
-            <button type="submit">Check Air Quality</button>
-
+            <button type="submit" id="submitBtn">Check Air Quality</button>
         </form>
-       
+
+        <p id="error" class="error"></p>
 
         <div class="info" id="result">
             <h1 class="info-title">Air Quality Checker</h1>
-            <p class="info-data">AQI: <span id="aqi"></span></p>
-            <p class="info-data">CO: <span id="co"></span></p>
-            <p class="info-data">NH3: <span id="nh3"></span></p>
-            <p class="info-data">NO: <span id="no"></span></p>
-            <p class="info-data">NO2: <span id="no2"></span></p>
-            <p class="info-data">O3: <span id="o3"></span></p>
-            <p class="info-data">PM2_5: <span id="pm2_5"></span></p>
-            <p class="info-data">PM10: <span id="pm10"></span></p>
-            <p class="info-data">SO2: <span id="so2"></span></p>
-    
+            <p class="info-data">AQI (US EPA): <span id="aqi"></span></p>
+            <p class="info-data">Dominant Pollutant: <span id="dominant"></span></p>
+            <p class="info-data">CO: <span id="co"></span> μg/m³</p>
+            <p class="info-data">NH3: <span id="nh3"></span> μg/m³</p>
+            <p class="info-data">NO: <span id="no"></span> μg/m³</p>
+            <p class="info-data">NO2: <span id="no2"></span> μg/m³</p>
+            <p class="info-data">O3: <span id="o3"></span> μg/m³</p>
+            <p class="info-data">PM2.5: <span id="pm2_5"></span> μg/m³</p>
+            <p class="info-data">PM10: <span id="pm10"></span> μg/m³</p>
+            <p class="info-data">SO2: <span id="so2"></span> μg/m³</p>
         </div>
 
-    
-      
-     
     </div>
-
-    
-    
-
-   
-
-
     <script src="index.js"></script>
 </body>
 </html>
